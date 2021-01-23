@@ -6,6 +6,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :validatable
   
+  has_many :courses
   def assign_default_role
     self.add_role(:student) if self.roles.blank?
   end

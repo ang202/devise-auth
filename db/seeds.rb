@@ -10,7 +10,8 @@
     [
       {
         title: Faker::Educator.course_name,
-        description:Faker::TvShows::GameOfThrones.quote
+        description:Faker::TvShows::GameOfThrones.quote,
+        user_id: User.last.id
       }
     ]
   )
